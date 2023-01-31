@@ -4,11 +4,13 @@ exports.createDerivatives = (req, res) => {
     let data = {
         POS: req.body.POS,
         OI: req.body.OI,
+        VOL: req.body.VOL,
         LAST: req.body.LAST,
         BID: req.body.BID,
         ASK: req.body.ASK,
         IV: req.body.IV,
         DELTA: req.body.DELTA,
+        STRIKE: req.body.STRIKE,
     };
     let sql = "INSERT INTO users SET ?";
     con.query(sql, data, function (err, result) {
